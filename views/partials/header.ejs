@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>PowderHound</title>
+		<link rel="stylesheet" type="text/css" href="/app.css">
+		<link href="https://fonts.googleapis.com/css?family=Kanit:200,400,400i,700|Lobster&display=swap" rel="stylesheet">
+		
+		<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	</head>
+	<body>
+		
+	<nav class="navbar navbar-expand-lg navbar-dark">
+		<div class="container">
+			<a class="navbar-brand" href="/">
+				<i class="fas fa-skiing"></i>
+			  PowderHound
+			</a>
+		</div>
+	</nav>
+		
+    <section id="header" class="jumbotron text-center">
+      	<h1 class="display-3" id="brand">PowderHound</h1>
+      	<p class="lead">Welcome to PowderHound!</p>
+		<a class="btn btn-brand" href="/mountains" role="button">All Conditions</a>
+		<div class="dropdown div-inline">
+		 	<button class="btn btn-alt dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				Report
+		  	</button>
+		  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+			 	<% for(var i=0;i<data.length;i++) { %>
+				<a class="dropdown-item" href="/mountains/<%= data[i].snoKey %>"><%= data[i].name %></a>
+				<% } %>
+			</div>
+		</div>
+    </section>

@@ -1,0 +1,105 @@
+.jumbotron {
+	font-family: 'Kanit', sans-serif;
+}
+
+.container {
+	font-family: 'Kanit', sans-serif;
+}
+
+.div-inline{
+    display:inline-block;
+}
+
+.navbar {
+	background-color: #234f6e;
+}
+
+a.btn-brand {
+	background-color: #234f6e;
+	border-color: #234f6e;
+	color: white;
+}
+
+button.btn-alt {
+	background-color: #598fb5;
+	border-color: #598fb5;
+	color: white;
+}
+
+.border-grid {
+    border: 1px solid #dee2e6!important;
+	height: 100px;
+	display: flex;
+    align-items: center; /* horizontal */
+    justify-content: center; /* vertical */
+}
+
+.today {
+	background-color: #bfdef5;
+}
+
+.tomorrow {
+	background-color: #abd1ed;
+}
+
+.next-day {
+	background-color: #98c9ed;
+}
+
+.data-text {
+	/* background-color: pink; */
+}
+
+.data-label {
+	text-align: left;
+	color: #93a1ab;
+	font-size: 0.8rem;
+}
+
+.card-label {
+	color: #93a1ab;
+	font-size: 0.8rem;
+}
+
+.all-mountains {
+	padding: 100px auto;
+	display: flex;
+    align-items: center; /* horizontal */
+    justify-content: top; /* vertical */
+}
+
+#header .display-3 {
+	font-family: 'Lobster', cursive;
+}
+
+.larger {
+	size: 1.2rem;
+}
+
+div#dataGrid {
+	max-width: 500px;
+	margin: 10px auto;
+	/* padding: 50px auto; */
+}
+
+div.wide-padding {
+	padding: 1rem;
+}
+
+div.less-margin {
+	padding: 0;
+}
+.primary {
+	color: #598fb5;
+	font-weight: bold;
+}
+
+.secondary {
+	color: #b6ccdb;
+	font-weight: bold;
+}
+
+a.btn-outline-brand {
+    border-color: #598fb5;
+	color: #598fb5;
+}

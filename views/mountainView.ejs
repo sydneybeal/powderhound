@@ -1,0 +1,107 @@
+<%- include("partials/header",{data: allData}) %>
+
+<div class="container text-center">
+	<h1 class="display-5">Report for <%= data.name %></h1>
+	<div class="container d-flex" id="dataGrid">
+	  <div class="row">
+		  <div class="w-100 data-label">Today</div>
+		<div class="col-lg-4 border-grid today rounded-left">
+			<div class="data-text">
+				<%= data.weatherText %>
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid today">
+			<div class="data-text">
+				Low: <%= data.low %>F
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid today rounded-right">
+			<div class="data-text">
+				High: <%= data.high %>F
+			</div>
+		</div>
+		<div class="w-100 data-label">Tomorrow</div>
+		<div class="col-lg-4 border-grid tomorrow rounded-left">
+			<div class="data-text">
+				<%= data.weatherTomText %>
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid tomorrow">
+			<div class="data-text">
+				Low: <%= data.lowTom %>F
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid tomorrow rounded-right">
+			<div class="data-text">
+				High: <%= data.highTom %>F
+			</div>
+		</div>
+		<div class="w-100 data-label">Next day</div>
+		<div class="col-lg-4 border-grid next-day rounded-left">
+			<div class="data-text">
+				<%= data.weatherNextText %>
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid next-day">
+			<div class="data-text">
+				Low: <%= data.lowNext %>F
+			</div>
+		</div>
+		<div class="col-lg-4 border-grid next-day rounded-right">
+			<div class="data-text">
+				High: <%= data.highNext %>F
+			</div>
+		</div>
+		<div class="w-100"><br></div>
+		<div class="col-lg-6 border-grid">
+			<div class="data-text primary">
+				Primary Condition:<br><%= data.pCond %>
+			</div>
+		</div>
+		<div class="col-lg-6 border-grid">
+			<div class="data-text secondary">
+				Secondary Condition:<br><%= data.sCond %>
+			</div>
+		  <%= //apiData.weatherText %>
+		</div>
+		<div class="w-100"></div>
+		<div class="col-lg-6 border-grid">
+			<div class="data-text">
+				Season Total:<br>
+				<%= data.seasonTotal %>"
+			</div>
+		</div>
+		<div class="col-lg-6 border-grid">
+			<div class="data-text">
+				Last snowfall:<br>
+				<%= data.lastAmount %>" on <%= data.lastSnow %>
+			</div>
+		</div>
+		<div class="w-100 data-label"></div>
+		<div class="col-lg-12 border-grid">
+			<div class="data-text">
+				<%= data.snowComment %>
+			</div>
+		</div>
+		 <div class="w-100"><br></div>
+		<div class="col-lg-6 border-grid">
+		<div class="data-text">
+				Weekend Hours:<br>
+				<%= data.wkndHrs %>
+			</div>
+		</div>
+		<div class="col-lg-6 border-grid">
+			<div class="data-text">
+				Weekday Hours:<br>
+				<%= data.wkdyHrs %>
+			</div>
+		</div>
+		<div class="w-100"><br></div>
+	  </div>
+	</div>
+	
+	<img src="<%= data.img %>" height=500px>
+	
+</div>
+
+<%- include("partials/footer") %>

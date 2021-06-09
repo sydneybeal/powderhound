@@ -1,0 +1,112 @@
+<%- include("partials/header",{data:allData}) %>
+
+	
+	<section id="gallery">
+		<div class="container text-center mb-5">
+			<a class="btn btn-lg btn-brand" href="/mountains/sort/vt" role="button">Vermont</a>
+			<a class="btn btn-lg btn-brand" href="/mountains/sort/nh" role="button">New Hampshire</a>
+			<a class="btn btn-lg btn-brand" href="/mountains/sort/me" role="button">Maine</a>
+		</div>
+		<div class="container ">
+			<!-- <h1 class="text-center">
+			Viewing All <%= data.length %> Skiing Locations
+			</h1> -->
+			<div class="row d-flex all-mountains align-items-center text-center justify-content-around">
+				<% for(var i=0;i<data.length;i++) { %>
+
+				<!-- <% //data.forEach(function(mtn){ %> -->
+					<div class="col-lg-4 mb-3" style="max-width: 400px;">
+						<div class="card">
+							<img src="<%= data[i].img %>" class="card-img-top" alt="..." height=200px>
+							<div class="card-body wide-padding">
+								<h5 class="card-title text-center">
+									<strong><%= data[i].name %>, <%= data[i].state %></strong>
+								</h5>
+								<hr>
+								<div class="card-text mt-3">
+									<div class="container d-flex text-center mb-3">
+										<div class="col-lg-4 card-data less-margin">
+												<span class="primary">
+													<%= data[i].trailsOpen %> / <%= data[i].trailsMax %><br>
+												</span>
+												<span class="card-label">Trails open</span><br>
+										</div>
+										<div class="col-lg-4 card-data less-margin">
+												<span class="primary">
+													<%= data[i].liftsOpen %> / <%= data[i].liftsMax %><br>
+												</span>
+												<span class="card-label">Lifts open</span><br>
+										</div>
+										<div class="col-lg-4 card-data less-margin">
+												<span class="primary">
+													<%= data[i].acresOpen %> / <%= data[i].acresMax %><br>
+												</span>
+												<span class="card-label">Acres open</span><br>
+										</div>
+									</div>
+									<div class="container d-flex text-center">
+										<div class="col-lg-12 card-data less-margin">
+												<span class="">
+													<strong><%= data[i].terrainParksOpen %> Terrain Park(s) Open</strong>
+												</span>
+										</div>
+									</div>
+									<hr>
+									<div class="container d-flex text-center mt-1 less-margin">
+										<p class="card-body larger">
+										Predicted: <span class="primary"><%= data[i].snowPredict %>" in the next 72 hours</span>
+										</p>
+									</div>
+									
+									<div class="container d-flex text-center mb-3">
+										<div class="col-lg-6 card-data less-margin">
+												Primary:<br><span class="primary"><%= data[i].pCond %></span>
+										</div>
+										<div class="col-lg-6 card-data less-margin">
+												Secondary:<br><span class="secondary"><%= data[i].sCond %></span>
+										</div>
+										
+									</div>
+									<p class="card-body">
+										Season Total: <strong><%= data[i].seasonTotal %>"</strong>
+										</p>
+									<hr>
+									<div class="container d-flex text-center mb-1">
+										<div class="col-lg-12 card-data less-margin">
+											<span class="card-label">Today:</span><br>
+											<strong><%= data[i].weatherText %></strong>
+											<br>
+											<%= data[i].low %>&#176;F - <%= data[i].high %>&#176;F
+										</div>
+									</div>
+									<div class="container d-flex text-center mb-1">
+										<div class="col-lg-12 card-data less-margin">
+											<span class="card-label">Tomorrow:</span><br>
+											<strong><%= data[i].weatherTomText %></strong><br>
+											<%= data[i].lowTom %>&#176;F - <%= data[i].highTom %>&#176;F
+										</div>
+									</div>
+									<div class="container d-flex text-center mb-3">
+										<div class="col-lg-12 card-data less-margin">
+											<span class="card-label">The next day:</span><br>
+											<strong><%= data[i].weatherNextText %></strong><br>
+											<%= data[i].lowNext %>&#176;F - <%= data[i].highNext %>&#176;F
+										</div>
+									</div>
+									<hr>
+									
+									
+								</div>
+								<a href="/mountains/<%= data[i].id %>" class="btn btn-outline-brand btn-small">View</a>
+								<a href="/mountains/<%= data[i].id %>" class="btn btn-outline-danger btn-small">
+									<i class="far fa-heart"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				<% } %>
+			</div>
+		</div>
+	</section>
+
+<%- include("partials/footer") %>
